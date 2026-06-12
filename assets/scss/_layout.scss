@@ -1,0 +1,232 @@
+// 
+// _layout.scss = Variabili + Navbar + Hero + Servizi
+// 
+
+// --- VARIABILI -----------------------------------------------
+
+$color-primary:     #6B3A2A;
+$color-primary-dark:#4A2419;
+$color-white:       #ffffff;
+$color-light:       #f9f9f9;
+$color-text:        #222222;
+$color-text-light:  #555555;
+$color-border:      #cccccc;
+
+$font-family:       'Georgia', serif;
+$font-size-base:    16px;
+$font-size-sm:      14px;
+$font-size-lg:      18px;
+$font-size-xl:      24px;
+$font-size-hero:    clamp(28px, 5vw, 48px);
+
+$spacing-sm:        12px;
+$spacing-md:        24px;
+$spacing-lg:        48px;
+$spacing-xl:        80px;
+
+$bp-tablet:         768px;
+$bp-desktop:        1280px;
+
+$radius-sm:         4px;
+$radius-md:         8px;
+
+// --- NAVBAR --------------------------------------------------
+
+.navbar {
+  background-color: $color-primary;
+  padding: $spacing-sm $spacing-md;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  &__logo {
+    color: $color-white;
+    font-family: $font-family;
+    font-size: $font-size-lg;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  &__hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background-color: $color-white;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    &.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    &.is-open span:nth-child(2) { opacity: 0; }
+    &.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+
+  &__menu {
+    display: none;
+    flex-direction: column;
+    background-color: $color-primary;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: $spacing-sm 0;
+
+    &.is-open { display: flex; }
+
+    a {
+      color: $color-white;
+      text-decoration: none;
+      padding: $spacing-sm $spacing-md;
+      font-size: $font-size-base;
+      transition: background-color 0.2s;
+
+      &:hover { background-color: $color-primary-dark; }
+    }
+  }
+
+  @media (min-width: $bp-tablet) {
+    &__hamburger { display: none; }
+
+    &__menu {
+      display: flex !important;
+      flex-direction: row;
+      position: static;
+      background: none;
+      padding: 0;
+      gap: $spacing-md;
+
+      a { padding: 4px 0; }
+    }
+  }
+}
+
+// --- HERO ----------------------------------------------------
+
+.hero {
+  background-color: $color-primary;
+  color: $color-white;
+  text-align: center;
+  padding: $spacing-xl $spacing-md;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-size: $font-size-hero;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: $spacing-md;
+    color: $color-white;
+  }
+
+  &__subtitle {
+    font-size: $font-size-lg;
+    line-height: 1.6;
+    margin-bottom: $spacing-lg;
+    color: $color-white;
+    opacity: 0.9;
+  }
+
+  &__cta {
+    display: inline-block;
+    color: $color-white;
+    text-decoration: none;
+    font-size: $font-size-base;
+    border-bottom: 2px solid $color-white;
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+
+    &:hover { opacity: 0.75; }
+  }
+
+  @media (min-width: $bp-tablet) {
+    min-height: 420px;
+    padding: $spacing-xl $spacing-lg;
+  }
+
+  @media (min-width: $bp-desktop) {
+    min-height: 500px;
+  }
+}
+
+// --- SERVIZI -------------------------------------------------
+
+.services {
+  padding: $spacing-xl $spacing-md;
+  background-color: $color-white;
+  text-align: center;
+
+  &__header { margin-bottom: $spacing-lg; }
+
+  &__title {
+    font-family: $font-family;
+    font-size: $font-size-xl;
+    font-weight: bold;
+    color: $color-text;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__subtitle {
+    font-size: $font-size-base;
+    color: $color-text-light;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $spacing-md;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    @media (min-width: $bp-tablet) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.service-card {
+  padding: $spacing-md;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &__icon {
+    font-size: 40px;
+    color: $color-primary;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__title {
+    font-family: $font-family;
+    font-size: $font-size-lg;
+    font-weight: bold;
+    color: $color-text;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__text {
+    font-size: $font-size-sm;
+    color: $color-text-light;
+    line-height: 1.6;
+  }
+}

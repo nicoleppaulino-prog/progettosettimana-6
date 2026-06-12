@@ -1,0 +1,341 @@
+.navbar {
+  background-color: #6B3A2A;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar__logo {
+  color: #ffffff;
+  font-family: "Georgia", serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.navbar__hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+}
+.navbar__hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.navbar__hamburger.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar__hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.navbar__hamburger.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+.navbar__menu {
+  display: none;
+  flex-direction: column;
+  background-color: #6B3A2A;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 12px 0;
+}
+.navbar__menu.is-open {
+  display: flex;
+}
+.navbar__menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+.navbar__menu a:hover {
+  background-color: #4A2419;
+}
+@media (min-width: 768px) {
+  .navbar__hamburger {
+    display: none;
+  }
+  .navbar__menu {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    background: none;
+    padding: 0;
+    gap: 24px;
+  }
+  .navbar__menu a {
+    padding: 4px 0;
+  }
+}
+
+.hero {
+  background-color: #6B3A2A;
+  color: #ffffff;
+  text-align: center;
+  padding: 80px 24px;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.hero__title {
+  font-family: "Georgia", serif;
+  font-size: clamp(28px, 5vw, 48px);
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 24px;
+  color: #ffffff;
+}
+.hero__subtitle {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 48px;
+  color: #ffffff;
+  opacity: 0.9;
+}
+.hero__cta {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+.hero__cta:hover {
+  opacity: 0.75;
+}
+@media (min-width: 768px) {
+  .hero {
+    min-height: 420px;
+    padding: 80px 48px;
+  }
+}
+@media (min-width: 1280px) {
+  .hero {
+    min-height: 500px;
+  }
+}
+
+.services {
+  padding: 80px 24px;
+  background-color: #ffffff;
+  text-align: center;
+}
+.services__header {
+  margin-bottom: 48px;
+}
+.services__title {
+  font-family: "Georgia", serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 12px;
+}
+.services__subtitle {
+  font-size: 16px;
+  color: #555555;
+}
+.services__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.service-card__icon {
+  font-size: 40px;
+  color: #6B3A2A;
+  margin-bottom: 12px;
+}
+.service-card__title {
+  font-family: "Georgia", serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 12px;
+}
+.service-card__text {
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.6;
+}
+
+.contact {
+  padding: 80px 24px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+.contact__header {
+  margin-bottom: 48px;
+}
+.contact__title {
+  font-family: "Georgia", serif;
+  font-size: 24px;
+  font-weight: bold;
+  color: #222222;
+  margin-bottom: 12px;
+}
+.contact__subtitle {
+  font-size: 16px;
+  color: #555555;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: left;
+}
+.contact-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.contact-form label {
+  font-size: 14px;
+  color: #222222;
+  font-weight: 600;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: #222222;
+  font-family: "Georgia", serif;
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #6B3A2A;
+}
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+.contact-form__submit {
+  background-color: #6B3A2A;
+  color: #ffffff;
+  border: none;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-family: "Georgia", serif;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  width: 100%;
+}
+.contact-form__submit:hover {
+  background-color: #4A2419;
+}
+
+.footer {
+  background-color: #222222;
+  color: #ffffff;
+  padding: 48px 24px;
+}
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  max-width: 1000px;
+  margin: 0 auto 48px;
+}
+@media (min-width: 768px) {
+  .footer__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.footer__col-title {
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+.footer__col-text {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.8;
+}
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__links li {
+  margin-bottom: 6px;
+}
+.footer__links a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+.footer__links a:hover {
+  color: #ffffff;
+}
+.footer__bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 24px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  color: #131313;
+  background-color: #ffffff;
+  line-height: 1.5;
+}
+
+/*# sourceMappingURL=style.css.map */

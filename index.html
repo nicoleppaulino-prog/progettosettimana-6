@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atelier</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="#" class="navbar__logo">Atelier</a>
+
+    <button class="navbar__hamburger" id="hamburger" aria-label="Apri menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="navbar__menu" id="nav-menu">
+      <a href="#studio">Studio</a>
+      <a href="#servizi">Servizi</a>
+      <a href="#contatti">Contatti</a>
+    </div>
+  </nav>
+
+  <section class="hero" id="studio">
+    <div class="hero__content">
+      <h1 class="hero__title">Architettura per spazi che parlano</h1>
+      <p class="hero__subtitle">
+        Progettiamo case, uffici e spazi commerciali con attenzione
+        alla luce, ai materiali e al contesto.
+      </p>
+      <a href="#contatti" class="hero__cta">Inizia un progetto</a>
+    </div>
+  </section>
+
+  <section class="services" id="servizi">
+    <div class="services__header">
+      <h2 class="services__title">I nostri servizi</h2>
+      <p class="services__subtitle">Tre aree di lavoro, una sola attenzione alla qualità.</p>
+    </div>
+
+    <div class="services__grid">
+
+      <div class="service-card">
+        <i class="fa-solid fa-house service-card__icon"></i>
+        <h3 class="service-card__title">Progettazione residenziale</h3>
+        <p class="service-card__text">
+          Case private, ville e ristrutturazioni domestiche,
+          dal sopralluogo alla consegna delle chiavi.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <i class="fa-solid fa-chair service-card__icon"></i>
+        <h3 class="service-card__title">Interior design</h3>
+        <p class="service-card__text">
+          Allestimenti d'interno per case e uffici,
+          con materiali selezionati e arredo su misura.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <i class="fa-solid fa-helmet-safety service-card__icon"></i>
+        <h3 class="service-card__title">Ristrutturazioni</h3>
+        <p class="service-card__text">
+          Riqualificazione di spazi esistenti, gestione dei lavori
+          e coordinamento con le imprese.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact" id="contatti">
+    <div class="contact__header">
+      <h2 class="contact__title">Contattaci</h2>
+      <p class="contact__subtitle">Compila il form, ti rispondiamo entro 48 ore.</p>
+    </div>
+
+    <form class="contact-form" action="#" method="post">
+
+      <div class="contact-form__group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Il tuo nome" required />
+      </div>
+
+      <div class="contact-form__group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="La tua email" required />
+      </div>
+
+      <div class="contact-form__group">
+        <label for="tipo">Tipo di progetto</label>
+        <select id="tipo" name="tipo">
+          <option value="residenziale">Residenziale</option>
+          <option value="rosa">Rosa</option>
+          <option value="blu">Blu</option>
+        </select>
+      </div>
+
+      <div class="contact-form__group">
+        <label for="messaggio">Messaggio</label>
+        <textarea id="messaggio" name="messaggio" placeholder="Raccontaci il tuo progetto..." required></textarea>
+      </div>
+
+      <button type="submit" class="contact-form__submit">Invia</button>
+
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__grid">
+
+      <div class="footer__col">
+        <p class="footer__col-title">Atelier</p>
+        <p class="footer__col-text">
+          Studio di architettura<br />
+          Via dei Pioppi 12, Milano
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__col-title">Link</p>
+        <ul class="footer__links">
+          <li><a href="#studio">Studio</a></li>
+          <li><a href="#servizi">Servizi</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__col-title">Contatti</p>
+        <p class="footer__col-text">
+          info@atelier.example<br />
+          +39 02 0000 1111
+        </p>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; 2026 Atelier &mdash; tutti i diritti riservati</p>
+    </div>
+  </footer>
+  <script src="assets/js/script.js"></script>
+
+</body>
+</html>
