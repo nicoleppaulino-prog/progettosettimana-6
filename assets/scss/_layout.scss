@@ -19,18 +19,18 @@ $font-size-lg:      18px;
 $font-size-xl:      24px;
 $font-size-hero:    clamp(28px, 5vw, 48px);
 
-$spacing-sm:        12px;
+$spacing-sm:        12px;  /*spaziatura del padding*/
 $spacing-md:        24px;
 $spacing-lg:        48px;
 $spacing-xl:        80px;
 
-$bp-tablet:         768px;
+$bp-tablet:         768px; /* breakpoint, le grandezze cambiano in base al dispositivo che utilizzo */
 $bp-desktop:        1280px;
 
-$radius-sm:         4px;
+$radius-sm:         4px;  /* angoli smussati*/
 $radius-md:         8px;
 
-// --- NAVBAR --------------------------------------------------
+// --- NAVBAR ----
 
 .navbar {
   background-color: $color-primary;
@@ -112,7 +112,7 @@ $radius-md:         8px;
   }
 }
 
-// --- HERO ----------------------------------------------------
+// --- HERO -----
 
 .hero {
   background-color: $color-primary;
@@ -151,7 +151,7 @@ $radius-md:         8px;
     color: $color-white;
     text-decoration: none;
     font-size: $font-size-base;
-    border-bottom: 2px solid $color-white;
+    
     padding-bottom: 2px;
     transition: opacity 0.2s;
 
@@ -168,7 +168,7 @@ $radius-md:         8px;
   }
 }
 
-// --- SERVIZI -------------------------------------------------
+// --- SERVIZI --
 
 .services {
   padding: $spacing-xl $spacing-md;
