@@ -2,7 +2,7 @@
 /* breakpoint, le grandezze cambiano in base al dispositivo che utilizzo */
 /* angoli smussati*/
 .navbar {
-  background-color: #6B3A2A;
+  background-color: black;
   padding: 12px 24px;
   display: flex;
   align-items: center;
@@ -47,7 +47,7 @@
 .navbar__menu {
   display: none;
   flex-direction: column;
-  background-color: #6B3A2A;
+  background-color: #793c28;
   position: absolute;
   top: 100%;
   left: 0;
@@ -65,7 +65,7 @@
   transition: background-color 0.2s;
 }
 .navbar__menu a:hover {
-  background-color: #4A2419;
+  background-color: #090909;
 }
 @media (min-width: 768px) {
   .navbar__hamburger {
@@ -85,7 +85,7 @@
 }
 
 .hero {
-  background-color: #6B3A2A;
+  background-color: #793c28;
   color: #ffffff;
   text-align: center;
   padding: 80px 24px;
@@ -177,7 +177,7 @@
 }
 .service-card__icon {
   font-size: 40px;
-  color: #6B3A2A;
+  color: #793c28;
   margin-bottom: 12px;
 }
 .service-card__title {
@@ -249,14 +249,14 @@
 .contact-form select:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #6B3A2A;
+  border-color: #793c28;
 }
 .contact-form textarea {
   min-height: 140px;
   resize: vertical;
 }
 .contact-form__submit {
-  background-color: #6B3A2A;
+  background-color: #793c28;
   color: #ffffff;
   border: none;
   padding: 14px 24px;
@@ -268,7 +268,7 @@
   width: 100%;
 }
 .contact-form__submit:hover {
-  background-color: #4A2419;
+  background-color: #090909;
 }
 
 .footer {

@@ -2,10 +2,10 @@
 // _layout.scss = Variabili + Navbar + Hero + Servizi
 // 
 
-// --- VARIABILI -----------------------------------------------
+// --- VARIABILI ---
 
-$color-primary:     #6B3A2A;
-$color-primary-dark:#4A2419;
+$color-primary:     #793c28;
+$color-primary-dark:#090909;
 $color-white:       #ffffff;
 $color-light:       #f9f9f9;
 $color-text:        #222222;
@@ -33,7 +33,7 @@ $radius-md:         8px;
 // --- NAVBAR ----
 
 .navbar {
-  background-color: $color-primary;
+  background-color: black;
   padding: $spacing-sm $spacing-md;
   display: flex;
   align-items: center;
